@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Piper and Bella</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       <!--    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+        <script src="lottie.js"></script>
+        <style>
+
+         
+         html, body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+#building2 {
+ height: 100%;
+ width: 100%;
+ margin: auto;
+ /*transform: translate(-4rem,-4rem);*/
+}
+
+#build {
+  height: 100%;
+  margin: auto;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  top: 0;right: 0;
+/*  transform: translateX(3rem);*/
+  
+}
+
+
+
+
+     .gridA {
+         display: grid;
+         grid-template-columns: repeat(100%,1fr);
+         grid-template-rows: minmax(110vh);
+        justify-items: center;
+        align-items: center ;
+         
+     }
+     .gridItem {
+         width: 100%;
+         height: 110vh;
+         background-color: #09f;
+     }
+     .gridItem:nth-child(even) {
+         background-color: #f00;
+         
+     }
+.calebShow {
+    display: grid;
+    grid-template-areas:
+    'leed new new'
+    'header header header'
+    'righty  righty righty'
+    'ohmy    you1  you1';
+}
+.ok {width: 100%;height: 100%;}
+ </style>
+
+
+
+       
+
+   </head>
+   <body>
+
+   <div class="gridA">
+         <div class="gridItem calebShow" style="background-color: transparent;">
+
+       <div class="ok" style="grid-area: header;background-color: transparent;">
+         <div id="build"></div>
+       </div>
+             <div class="ok" style="grid-area: righty;background-color: transparent;">2</div>
+             <div class="ok" style="grid-area: you1;background-color: transparent;">3</div>
+             <div class="ok" style="grid-area: ohmy;background-color: transparent;">4</div>
+              <div class="ok" style="grid-area: leed;background-color: transparent;">
+                <div id="building2"></div>
+              </div>
+               <div class="ok" style="grid-area: new;background-color: transparent;">bb</div>
+         </div>
+         <div class="gridItem" style="background-color:transparent ;">2</div>
+         <div class="gridItem" style="background-color: transparent;">3</div>
+         
+     </div>
+        
+     
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.2/lottie.min.js"></script>
+
+<script>lottie.loadAnimation({
+  container: document.getElementById('build'), // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: './praytoGod.json' // the path to the animation json
+});</script>
+
