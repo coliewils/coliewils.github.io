@@ -1,0 +1,1708 @@
+ 
+<!DOCTYPE html>
+<html style="overflow-x: hidden;">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Fira+Code&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <style>
+          /* TABLE OF CONTENTS
+
+SECTION 1: GENERAL
+SECTION 2: FONTS
+SECTION 3: PRELOADER
+SECTION 4: HEADER
+SECTION 5: HOME
+SECTION 6: ABOUT
+SECTION 7: MUSIC
+SECTION 8: GALLERY
+SECTION 9: CONTACT
+SECTION 10: PAGE FOOTER
+SECTION 11: FOOTER
+SECTION 12: BACK TO TOP BTN
+SECTION 13: ANIMATIONS
+SECTION 14: FADE IN PAGE
+SECTION 15: MEDIA
+
+*/
+
+
+/* SECTION 1: GENERAL */
+
+* {
+    box-sizing: border-box;
+    /*font-family: 'Fira Code', monospace;*/
+font-family: 'Archivo Black', sans-serif;
+}
+body{overflow-x: hidden;}
+html, body {
+    width: 100vw;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: #091730;
+    /*font-family: 'Fira Code', monospace;*/
+font-family: 'Archivo Black', sans-serif;
+    color: black;
+}
+@media (max-width: 500px) {
+    html,body{
+        overflow-x: hidden !important;
+    }
+    
+}
+
+a, body, div, h1, h2, h3, html, p, section, span, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #8890b1;
+}
+p {
+    font-family: 'Fira Code', monospace;
+ }
+
+ul {
+    list-style: none;
+    color: #8890b1;
+}
+
+a {
+    font-family: 'Fira Code', monospace;
+/*font-family: 'Archivo Black', sans-serif;*/
+    color: #8890b1;
+    text-decoration: none;
+}
+
+/* SECTION 2: FONT */
+
+/*@font-face {
+    font-family: Optician Sans;
+    src: url(font/Optician-Sans.otf);
+}
+*/
+/* SECTION 3: PRELOADER */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity .3s .6s ease;
+    overflow-x: hidden;
+}
+
+#loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: opacity .3s ease
+}
+
+#loadtitle {
+    color: #fff;
+    margin: 5px 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+#preloader .line {
+  width: 10vh;
+  height: 10px;
+  background: #fff;
+  left:0;
+  display: inline-block;
+  animation: opacity 1000ms infinite ease-in-out;
+  transform: skew(-138deg);
+}
+
+#preloader span {
+    position: relative;
+    left: 33%;
+}
+
+#preloader .line-1 {
+    animation-delay: 700ms;
+}
+#preloader .line-2 {
+    animation-delay: 500ms;
+}
+#preloader .line-3 {
+    animation-delay: 300ms;
+}
+#preloader .line-4 {
+    animation-delay: 100ms;
+}
+#preloader .line-6 {
+    animation-delay: 100ms;
+}
+#preloader .line-7 {
+    animation-delay: 300ms;
+}
+#preloader .line-8 {
+    animation-delay: 500ms;
+}
+#preloader .line-9 {
+    animation-delay: 700ms;
+}
+#preloader .line-10 {
+    animation-delay: 900ms;
+}
+
+@keyframes opacity { 
+  0% { 
+    opacity: 1;
+    height: 25px;
+  }
+  50% { 
+    opacity: 0;
+    height: 19px;
+  }
+  100% { 
+    opacity: 1;
+    height: 25px;
+  }  
+}
+
+/* SECTION 4: HEADER */
+
+header {
+    overflow-x: hidden;
+    position: absolute;
+    width: 100%;
+    height: 128px;
+    z-index: 1000;
+    background: #091730;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    font-family: 'Fira Code', monospace;
+/*font-family: 'Archivo Black', sans-serif;*/
+}
+
+.open {
+    height: 350px;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.logo {
+    float: left;
+    padding: 20px 20px 40px 20px;
+}
+
+.logo img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+
+.navbar {
+    text-align: center;
+    width: 100%;
+    font-family: 'Fira Code', monospace;
+/*font-family: 'Archivo Black', sans-serif;*/
+}
+
+.navbar a {
+    color: #8890b1;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    font-family: 'Fira Code', monospace;
+/*font-family: 'Archivo Black', sans-serif;*/
+}
+
+.navbar a:hover {
+    transform: scale(1.5);
+}
+
+.navbtn {
+    display: inline-block;
+    float: right;
+    vertical-align: middle;
+    padding: 25px 20px 40px 20px;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background: #0fd;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.socials {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.socials a {
+    padding: 0 10px;
+}
+
+.socials a:first-child {
+    padding: 0 10px 0 0;
+}
+
+.socials a:last-child {
+    padding: 0 0 0 10px;
+}
+
+.socials img {
+    height: 20px;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.socials img:hover {
+    transform: scale(1.5);
+}
+
+/* SECTION 5: HOME */
+
+#home {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.profpicContainer {
+    position: relative;
+    height: calc(90% - 96px);
+    top: 96px;
+    background: #091730;
+    overflow: hidden;
+}
+
+.profpicContainer video {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+}
+
+#home img {
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%,0);
+    height: 100%;
+    -webkit-filter: drop-shadow(-50px 100px 170px white);
+    filter: drop-shadow(-50px 100px 170px white); 
+    z-index: 3;
+}
+
+.square1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid white;
+    height: 50%;
+    width: 50%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0 0 5px white);
+    z-index: 2;
+}
+
+.square2 {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    border: 5px solid white;
+    height: 40%;
+    width: 40%;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(0 0 5px white);
+    z-index: 1;
+}
+
+.textContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+}
+
+.profpicContainer h1 {
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 0 0 5px black;
+    z-index: 3;
+}
+
+#home .btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 15px 40px;
+    text-align: center;
+    font-family: 'Optician Sans';
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    z-index: 4;
+}
+
+#home .btn:hover {
+    background: white;
+    color: black;
+}
+
+.scrollDown {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(0,-50%);
+    background: blue;
+    width: 100%;
+    z-index: 20;
+}
+
+.scrollDown .arrow {
+    position: absolute;
+    border-color: black;
+    border-width: 0 3px 3px 0;
+    padding: 7px;
+    opacity: 0;
+    animation: move 3s ease-out infinite;
+    z-index: 20;
+}
+
+.scrollDown .arrow:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.scrollDown .arrow:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px) rotate(45deg);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) rotate(45deg);
+  }
+}
+
+/* SECTION 6: ABOUT */
+
+#about {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.aboutpicContainer {
+    position: relative;
+    float: right;
+    padding: 40px 0;
+    width: 100%;
+}
+
+.aboutpicContainer img {
+    position: relative;
+    float: right;
+    height: 30rem;
+}
+
+.aboutpicContainer .decLine {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    height: 400px;
+    width: 350px;
+    border: 20px solid black;
+}
+
+.abouttextContainer {
+    position: block;
+    padding: 20px 40px;
+    text-align: justify;
+}
+
+.abouttextContainer h1:first-child {
+    font-weight: 100;
+    line-height: 18px;
+}
+
+.abouttextContainer h1:nth-child(2){
+    font-weight: 900;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+}
+
+.addInfo {
+    position: block;
+    padding: 20px 40px 20px 40px;
+}
+
+.addInfo .arrow {
+    position: relative;
+    border-color: black;
+    float: right;
+    transform: rotate(-45deg);
+}
+
+.accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    overflow: hidden;
+    font-family: 'Optician Sans';
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.activeacc, .accordion:hover {
+    filter: invert(100%);
+}
+
+.activeacc, .accordion:active {
+    background-color: white;
+}
+
+.panel {
+    color: black;
+    border-bottom: 1px black solid;
+    padding: 0 40px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.panel li {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.etc {
+    display: none;
+}
+
+.btnContainer {
+    text-align: center;
+    padding: 20px 40px 0 40px;
+}
+
+#about .btn {
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 50px;
+    text-align: center;
+    font-family: 'Optician Sans';
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    z-index: 4;
+}
+
+#about .btn:hover {
+    background: black;
+    color: white;
+}
+
+/* SECTION 7: MUSIC */
+
+#music {
+    position: relative;
+    height: 140%;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#music h1:first-child {
+    padding: 0 40px;
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#music h1:nth-child(2){
+    padding: 0 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+}
+
+#music .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.musicContainer {
+    position: relative;
+    top: 0;
+    height: calc(100% - 59.6px);
+    width: 100%;
+}
+
+#albumart {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    padding: 40px;
+}
+
+#album {
+    position: absolute;
+    height: calc(100% - 80px);
+    max-height: 400px;
+    max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 50px #222;
+}
+
+.art {
+    height: 100%;
+    display: none;
+}
+
+.imgactive {
+    display: block;
+}
+
+#audioplayer {
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+
+#songtitles {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+#titlesContainer {
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    line-height: 15px;
+}
+
+.songtitles {
+    display: none;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+#songtitles h3 {
+    font-weight: 100;
+}
+
+.titleactive {
+    display: block;
+}
+
+#btncontrols {
+    position: relative;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    background: transparent;
+}
+
+#btncontrols button {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    cursor: pointer;
+}
+
+#btncontrols button:nth-child(2){
+    height: 60px;
+    width: 60px;
+}
+
+#pButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#prevBtn {
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-image: url(../img/Icons/previous.png);
+    right: 60px;
+}
+
+#nextBtn {
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-image: url(../img/Icons/next.png);
+    left: 60px;
+}
+
+.play {
+    background: url("../img/Icons/play.png");
+}
+
+.pause {
+    background: url('../img/Icons/pause.png');
+}
+
+#audioseek {
+    position: relative;
+    height: 20%;
+    width: 100%;
+}
+
+#audioseek span {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 15%;
+    margin-top: -4px;
+}
+
+#timeleft {
+    left: 0;
+    text-align: right;
+    padding-right: 5px;
+}
+
+#maxtime {
+    right: 0;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#timeline {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: 50%;
+    transform: translate(-50%,-50%);
+  width: 70%;
+  height: 4px;
+  margin: 20px 0;
+    border: 1px black solid;
+    z-index: 200;
+}
+
+#playhead {
+  width: 12px;
+    border-radius: 50%;
+  height: 12px;
+    margin-top: -5px;
+  background: black;
+}
+
+#addmusicBtn {
+    height: 20%;
+    width: 100%;
+}
+
+#music .btn {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+    padding: 15px 50px;
+    text-align: center;
+    font-family: 'Optician Sans';
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    z-index: 4;
+}
+
+#music .btn:hover {
+    background: black;
+    color: white;
+}
+
+/* SECTION 8: GALLERY */
+
+#gallery {
+    position: relative;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    overflow: hidden;
+}
+
+#gallery .container {
+    position: relative;
+    top: 5%;
+    width: 100%;
+}
+
+#gallery h1:first-child {
+    padding: 0 40px;
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#gallery h1:nth-child(2){
+    padding: 0 40px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+}
+
+#gallery a {
+    margin: -1.63px;
+}
+
+#instafeed {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+}
+
+#instafeed img {
+    max-width: 100%;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    opacity: .75;
+}
+
+#instafeed img:hover {
+    opacity: 1;
+    border: 20px #222 solid;
+}
+
+/* SECTION 9: CONTACT */
+
+#contact {
+    position: relative;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 40px;
+}
+
+#contact h1:first-child {
+    font-weight: 100;
+    line-height: 18px;
+}
+
+#contact h1:nth-child(2){
+    font-weight: 900;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+
+#contact-form {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#contact-form div {
+    padding: 10px 0;
+}
+
+#contact-form input, #contact-form button, #contact-form textarea, #contact-form select{
+    font-family: 'Optician Sans';
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width:100%;
+    box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow:inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border:1px solid #CCC;
+    background:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+
+#contact-form button[type="submit"] {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+    width: 40%;
+    border: 1px solid white;
+    margin: 0 0 5px;
+    padding: 10px;
+    color: white;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+#contact-form button[type="submit"]:hover {
+    background: white;
+    color: black;
+}
+
+#contact-form textarea {
+    height: 120px;
+}
+
+/* SECTION 10: PAGE FOOTER */
+
+#pageFooter {
+    background: white;
+    width: 100%;
+    padding: 96px 48px 63px 46px;
+}
+
+#subscribe input, #subscribebtn {
+    font-family: 'Optician Sans';
+}
+
+#subscribe input[type="subscribeemail"] {
+    position: relative;
+    width: 100%;
+    box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -webkit-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    -moz-box-shadow: inset 0 1px 2px #DDD, 0 1px 0 #FFF;
+    border: 1px solid #CCC;
+    background: #FFF;
+    margin-right: 24px;
+    margin-bottom: 25px;
+    padding: 17px;
+    border-radius: 5px;
+}
+
+#subscribebtn {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+    margin-bottom: 48px;
+    border: 1px solid black;
+    padding: 18px 32px;
+    color: black;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+#subscribebtn:hover {
+    background: black;
+    color: white;
+}
+
+.footerSocials {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.footerSocials a {
+    margin-bottom: 36px;
+    display: inline-block;
+    padding: 0 13px;
+}
+
+.footerSocials img {
+    height: 4vh;
+    -webkit-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.footerSocials img:hover {
+    transform: scale(1.5);
+}
+
+.etclinks {
+    margin-bottom: 48px;
+}
+
+.etclinks h1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+#pageFooter h5 {
+    text-align: center;
+}
+
+/* SECTION 11: FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* SECTION 12: BACK TO TOP BTN */
+
+#topBtn {
+    position: fixed;
+    bottom: -50px;
+    opacity: 0;
+    right: 20px;
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 18px;
+    transition: all .3s ease-out;
+}
+
+#topBtn:hover {
+    background-color: #555;
+}
+
+/* SECTION 13: ANIMATIONS */
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: scale3d(0.5, 0.5, 0.5) translate(-50%,0) rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/* SECTION 14: FADE IN PAGE */
+
+@keyframes fade-in {
+    from {opacity: 0; transform: scale(.7,.7)}
+    to {opacity: 1;}
+}
+
+.fade-in {
+    animation: fade-in 1.4s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* SECTION 15: MEDIA */
+
+@media (min-width: 600px){
+    #instafeed {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #subscribe input[type="subscribeemail"]{
+        width: 500px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}
+
+@media (min-width: 800px){
+    header {
+        background: transparent;
+       /* filter: invert(100%);*/
+    }
+    .logo {
+        padding: 5px 7px 5px 7px;
+        height: 80px;
+    }
+    .navbar {
+        position: absolute;
+        right: 0;
+        display: inline;
+        width: auto;
+        padding: 40px;
+    }
+    .navbar a {
+        text-align: right;
+        width: auto;
+        -webkit-transition: all .3s ease-out;
+        -ms-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
+    .navbar a:hover {
+        transform: scale(1.1);
+    }
+    .navbtn {
+        display: none;
+    }
+    span.navNum {
+        color:#0fd !important;
+        font-family: 'Fira Code', monospace ;
+
+    }
+    .profpicContainer {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+/*font-family: 'Archivo Black', sans-serif;*/
+    }
+    .profpicContainer video {
+        visibility: visible;
+    }
+    #home img {
+        visibility: hidden;
+    }
+    .square1 {
+        visibility: hidden;
+    }
+    .square2 {
+        visibility: hidden;
+    }
+    .textContainer {
+        top: 85%;
+    }
+    .aboutpicContainer {
+        width: auto;
+    }
+    .aboutpicContainer img {
+        margin: 0 40px 20px 80px;
+    }
+    .aboutpicContainer .decLine {
+        right: 80px;
+        height: 480px;
+        width: 310px;
+    }
+    .etc {
+        display: block;
+    }
+    #btncontrols {
+        height: 100px;
+    }
+    #btncontrols button {
+        height: 80px;
+        width: 80px;
+    }
+    #btncontrols button:nth-child(2){
+        height: 100px;
+        width: 100px;
+    }
+    #instafeed {
+        padding: 40px;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #instafeed img:hover {
+        box-shadow: 0px 0px 10px #222;
+        transform: scale(1.1);
+        border: 0px;
+    }
+    #contact-form {
+        width: 70%;
+    }
+    .scrollDown {
+        top: 89%;
+    }
+    .scrollDown .arrow {
+        border-color: white;
+    }
+}
+
+@media (min-width: 1000px){
+    #about {
+        padding: 40px;
+    }
+    #music {
+        padding: 40px;
+    }
+    #gallery {
+        padding: 40px;
+    }
+    #instafeed {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    #contact {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 500px){
+    header {
+        height: 90px;
+    }
+    .logo {padding: 5px 7px 5px 7px;}
+
+    }
+
+@media (max-width: 800px){
+.okSpaced{
+    top:-36vh;
+
+}
+}
+@media (min-width: 801px){
+.okSpaced{
+    top:-55vh;
+
+}
+}
+#showUni {
+    display: none;
+    width: 300px;height: 320px;background-color: rgba(245,245,245,0.32);position: relative;margin-top: 3px;padding-top: 3px;transform: translateX(-1rem); float: right;
+}
+
+
+        </style>
+        
+        <!-- JS FOR INSTAGRAM -->
+        <script src="js/instafeed.min.js"></script>
+     <!--    <script src="js/custominsta.js"></script> -->
+        
+        <title>NeoCord Visuals</title>
+    </head>
+    <body>
+        <div id="preloader">
+            <div id="loader">
+                <div id="loadtitle">LoganWDev</div>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+              
+            </div> 
+        </div>
+        <header>
+            <div class="logo">
+                <a style="width: 100%;height: 120px "  href="#home"><img src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/49504406_2288968034716656_3092059012087152640_n.jpg?_nc_cat=104&_nc_oc=AQmpEtNJzcJ1q4_a24adS_yHrxrlzjQTQBcpGXI8jATWjdzs2r6FqCJfo_W4b-rCpxD3M3ezDugUEJIrBuJVsk4u&_nc_ht=scontent-ort2-2.xx&oh=77669296de6461fb57eb973d1afce429&oe=5DA5E371"></a>
+            </div>
+            <div class="navbtn" onclick="navbar()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="navbar" onclick="navLink()" style="color: #00ffde;letter-spacing: 0.12rem;">
+                <a href="#about"><span class="navNum" >01.</span>ABOUT</a>
+                <a href="#music"><span class="navNum" >02.</span>EXPERIENCE</a>
+                <a href="#gallery"><span class="navNum" >03.</span>WORK</a>
+                <a href="#contact"><span class="navNum" >04.</span>CONTACT</a>
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/Icons/modern-facebook-b.png"></a>
+                <a href="https://www.instagram.com//" target="_blank"><img src="img/Icons/modern-instagram-b.png"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="img/Icons/modern-twitter-b.png"></a>
+                <a href="https://soundcloud.com/" target="_blank"><img src="img/Icons/modern-soundcloud-b.png"></a>
+                <a href="https://www.snapchat.com/add/" target="_blank"><img src="img/Icons/modern-snapchat-b.png"></a>
+            </div>
+        </header>
+        <div id="home">
+
+           <div class="textContainer" style="position: absolute !important;z-index: 2;left: 50%;">
+
+
+        <div class="okSpaced" style="/*border: 3px solid white; */position: absolute;width: 68vw;left: 50%;transform: translate(-50%);padding-top: 80px;box-sizing: border-box;">
+            <p style="color: #0fd;font-size: 1.2rem; font-family: 'Fira Code', monospace;">Hi, My Name is</p>
+
+            <h1 style="color: white;font-size: 3.6rem;padding-bottom: 3px;padding-bottom: 3px;">Logan Wilson</h1>
+
+            <h1>I build things for the web</h1>
+            <br>
+            <p style="color: #8890b1;font-family: 'Fira Code', monospace;text-shadow: 1px 1px 1px rgba(240,240,240,0.32);">I'm a software engineer based in Chicago specializing in building and stunning, high-quality websites and applications. <a id="trig"  href="https://uxdesign.cc/unicorn-designer-training-manual-eb2439a10bc9" target="_blank">I'm a unicorn 🦄 (click here to find out what that means!)</a></p>
+         
+            <div id="showUni" >
+                <p style="color: #fff;padding: 5px 7px 5px 7px;font-size: 14px;text-shadow: 1px 1px 3px rgba(0,0,0,0.68);"><span style="color: #0fd;">Unicorn Software Engineer</span> : In recent years, the term has evolved from a person who can design and code.. to now defined as a supernatural being that can design, code, conduct user research, come up with business strategies, write UX copy, and [insert additional super powers here].</p>
+            </div>
+        </div>
+   <script>
+            const messageBlock = document.getElementById('showUni');
+            const trigger = document.getElementById('trig');
+           
+ trigger.addEventListener('mouseover',function(){
+            messageBlock.style.display = 'block'
+        });
+ trigger.addEventListener('mouseout',function(){
+            messageBlock.style.display = 'none'
+        });
+
+            
+              
+               
+            </script>
+          
+                    <a href="#contact" style="position: absolute;margin-left: -33.5vw;"><button class="btn" style="font-size: 1.2rem;"  >Contact Me</button></a>
+                </div>
+          
+
+            <div class="profpicContainer" >
+
+                <!-- <video type="video/mp4"  src="https://player.vimeo.com/external/324296539.sd.mp4?s=806775db4de3140951b439ef4b2a69c8bd91fa0f&profile_id=164&oauth2_token_id=57447761" autoplay muted loop></video>
+                <div class="profpicImgs" style="position: absolute;z-index: 2;"> -->
+         
+                </div>
+               
+            </div>
+            <div class="scrollDown">
+                <div class="arrow down"></div>
+                <div class="arrow down"></div>
+                <div class="arrow down"></div>
+            </div>
+        </div>
+        <div class="vd" style="width: 100vw;height: 110vh;z-index: 0;margin-top:-105vh;display: flex;justify-content:center;">
+     <!--  <img style="width: 100%;height: 100%;z-index: 0;" src="https://dl3.pushbulletusercontent.com/Nt35Fl5JHPkDUJ2onfj236ATs24pYLox/PatClogo11.png" alt=""> -->
+        </div>
+        <div id="about">
+            <div class="aboutpicContainer hidden">
+               
+                <img style="transform: scale(0.88);" src="https://dl3.pushbulletusercontent.com/aVDqcEBjDWFDSgKS9telVdQBtbzoPPhL/loganPortfolioFace2blueish.jpg">
+            </div>
+            <div class="abouttextContainer hidden">
+                <h1>Hello</h1>
+                <h1>About Me</h1>
+                <p style=" font-family: 'Fira Code', monospace;">NeoCord Visuals, is one of Illinois' most versatile VJs. Catch him in the scene and all over Chicago's hottest venues. His visual sets bring stimulating content and cutting-edge projection-mapping to Bar/Clubs/Venues, and anywhere in between.  This versatility allows him to play to a variety of audiences as both a main Vj, or can even fill in last minute. Don't fret.  NeoCord Visuals have captivated audiences for many popular touring DJs as well as a headlining act in Chicago's most coveted nightclubs.</p>
+                <p class="etc">Born in the USA's East Coast, growing up in Main, and later, spending time in New Orleans, NeoCord was exposed to unique visions and styles often not found in the midwest or mainstream scenes. These influences have helped set NeoCord apart from his peers. From an early age, he was surrounded by a love for music, entertainment, &amp; visual artistry, and swiftly developed a love for creating dope video accompaniments and sharing new discoveries with whomever he could. His adoration for these fundamentals that are the core of VJing has already taken him far in his growing career.<br> Neocord cares not only about the art of VJing, but also the overall entertainment of events his is a part of. In Chicago, he is the go-to VJ for the Good Music Collective party hosted every summer, and one of the group choice Vjs. NeoCord can regularly be found at his resident spots at several top nightclubs in the Chicago area.</p>
+            </div>
+            <div class="addInfo hidden">
+                <button class="accordion">EQUIPMENT<div id="equiparrow" class="arrow down"></div></button>
+                    <div class="panel">
+                        <li>A503 Epson projector</li>
+                        <li>Custom Built PC</li>
+                        <li></li>
+                    </div>
+                <button class="accordion">VENUES<div id="venuesarrow" class="arrow down"></div></button>
+                    <div class="panel">
+                        <li>No9 (Chicago, IL)</li>
+                        <li>Concrete Cowboy (Chicago, IL)</li>
+                        <li>Clutch Bar (Chicago, IL)</li>
+                        <li>Cuvee (Chicago, IL)</li>
+                        <li>Primary Nightclub (Chicago, IL)</li>
+                        </div>
+                <button class="accordion">ARTISTS SUPPORTED<div id="artistarrow" class="arrow down"></div></button>
+                    <div class="panel">
+                        <li>Good Music Collective</li>
+                        <li>The III Studios</li>
+                        <li>Logan_W_MediaArts</li>
+                        <li>Flow Kitty Collective</li>
+                        <li>more...</li>
+                        
+                    </div>     
+            </div>
+            <div class="btnContainer hidden">
+                <a href="https://www.facebook.com/NabsstheDJ" target="_blank"><button class="btn">VIEW MORE</button></a>
+            </div>
+        </div>
+        <div id="music">
+            <div class="container">
+                <div class="musicContainer hidden">
+                    <h1>My</h1>
+                    <h1>Projects</h1>
+                    <div id="albumart">
+                        <div id="album">
+                            <img class="art imgactive" src="img/Art/The%20DJ%20Firm%20Podcast%20Episode%20007.png">
+                            <img class="art" src="img/Art/BACKATIT%20PT6.jpg">
+                            <img class="art" src="img/Art/BACKATIT%20PT5.jpg">
+                            <img class="art" src="img/Art/BACKATIT%20PT4.jpg">
+                        </div>
+                    </div>
+                  
+                        <div id="addmusicBtn">
+                            <a href="https://instagram.com/neocordy" target="_blank"><button class="btn">InstaGram</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   <!--      <div id="gallery" class="hidden">
+            <div class="container">
+                <h1>MEDIA</h1>
+                <h1>GALLERY</h1>
+                <p>Instapics will auto-Populate this section</p>
+                <div id="instafeed" class="row" style="">
+                  <div class="gridy" style="border: 3px solid black;height: 100%;width: 100%;align-self: center;">1</div>
+                  <div class="gridy" style="border: 3px solid black;height: 100%;width: 100%;align-self: center;">2</div>
+                  <div class="gridy" style="border: 3px solid black;height: 100%;width: 100%;align-self: center;">3</div>
+                  <div class="gridy" style="border: 3px solid black;height: 100%;width: 100%;align-self: center;">4</div>
+                    
+                </div>
+                  
+            </div>
+        </div> -->
+        <div id="contact">
+            <div class="container hidden" id="contactContainer">
+                <h1>CONTACT</h1>
+                <h1>Get in touch</h1>
+                <form id="contact-form" name="contactForm" action="inc/sendEmail.php" method="post" class="hidden">
+                    <div>
+                        <label>
+                            <span>Name: (required)</span>
+                            <input name="contactName" placeholder="Please enter your name" type="text" tabindex="1" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <span>Email: (required)</span>
+                            <input name="contactEmail" placeholder="Please enter your email address" type="email" tabindex="2" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <span>Message: (required)</span>
+                            <textarea name="contactMessage" placeholder="Include all the details you can" tabindex="3" required></textarea>
+                        </label>
+                    </div>
+                    <div>
+                        <button name="submit" type="submit" id="contact-submit">Send Email</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="pageFooter" class="">
+            <div class="footerSocials">
+                <a href="https://www.facebook.com/NabsstheDJ" target="_blank"><img src="img/Icons/modern-facebook-b.png"></a>
+                <a href="https://www.instagram.com/djnabss/" target="_blank"><img src="img/Icons/modern-instagram-b.png"></a>
+                <a href="https://twitter.com/djnabss" target="_blank"><img src="img/Icons/modern-twitter-b.png"></a>
+                <a href="https://soundcloud.com/nabsss" target="_blank"><img src="img/Icons/modern-soundcloud-b.png"></a>
+                <a href="https://www.snapchat.com/add/dopeboynextdoor" target="_blank"><img src="img/Icons/modern-snapchat-b.png"></a>
+            </div>
+            <form id="subscribe" name="subscribe" method="post">
+                <div>
+                    <label>
+                        <input name="contactEmail" placeholder="Enter your email" type="subscribeemail" required>
+                    </label>
+                </div>
+            </form>
+            <div>
+                <button name="subscribesubmit" type="subscribesubmit" id="subscribebtn">SUBSCRIBE</button>
+            </div>
+            <div class="etclinks">
+                <a href="#"><h1>HOME</h1></a>
+                <a href="https://www.thedjfirm.com/" target="_blank"><h1>THE GOOD MUSIC COLLECTIVE</h1></a>
+                <a href="#contact"><h1>CONTACT</h1></a>
+            </div>
+            <h5>©2019 NeoCord Visuals. </h5>
+            <a href="" target="_blank"><h5>Coded by:</h5></a>
+        </div>
+        <footer>
+            <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="arrow up"></i></button>
+        </footer>
+    <script>
+      // PRELOADER EVENT //
+
+window.setTimeout("fadeout()", 3000);
+window.setTimeout("showPage()", 4000);
+
+function fadeout() {
+    document.getElementById("loader").style.opacity = "0";
+    document.getElementById("preloader").style.opacity = "0";
+}
+
+function showPage() {
+    document.getElementById("preloader").style.display = "none";
+}
+
+// NAV MENU EVENTS //
+
+var header = document.querySelector("header");
+var navbtn = document.querySelector(".navbtn");
+
+function navbar() {
+    navbtn.classList.toggle("change");
+    header.classList.toggle("open");
+}
+
+function navLink() {
+    if(header.classList = "open"){
+        navbtn.classList.remove("change");
+        header.classList.remove("open");
+    }
+}
+
+// ABOUT ADD INFO ACCORDION EVENT //
+
+var acc = document.getElementsByClassName("accordion");
+var j;
+
+for (j = 0; j < acc.length; j++) {
+    acc[j].addEventListener("click", function(){
+        this.classList.toggle("activeacc");
+        var panel = this.nextElementSibling;
+        var accArrow = this.firstElementChild;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            accArrow.style.transform = "rotate(-45deg)";
+        } else {
+            panel.style.display = "block";
+            accArrow.style.transform = "rotate(45deg)";
+        }
+    });                     
+}
+
+
+
+// BACK TO TOP & SCROLL FADE IN EVENT //
+
+var topBtn = document.getElementById("topBtn");
+var aboutPicContainer = document.querySelector(".aboutpicContainer");
+var aboutTextContainer = document.querySelector(".abouttextContainer");
+var accordions = document.querySelector(".addInfo");
+var aboutbtnContainer = document.querySelector(".btnContainer");
+var musicContainer = document.querySelector(".musicContainer");
+var gallery = document.getElementById("gallery");
+var contactContainer = document.getElementById("contactContainer");
+var contactForm = document.getElementById("contact-form");
+var pageFooter = document.getElementById("pageFooter");
+
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+}
+
+window.addEventListener("scroll", checkScroll);
+
+function checkScroll(){
+    if (window.pageYOffset > 50) {
+        topBtn.style.bottom = "20px";
+        topBtn.style.opacity = "1";
+    } else {
+        topBtn.style.bottom = "-50px";
+        topBtn.style.opacity = "0";
+    }
+    if(document.documentElement.clientWidth < 600){
+        if(window.pageYOffset < 600){
+            aboutPicContainer.classList.add("fade-in");
+            aboutPicContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 600){
+            aboutTextContainer.classList.add("fade-in");
+            aboutTextContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 940){
+            accordions.classList.add("fade-in");
+            accordions.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 1100){
+            aboutbtnContainer.classList.add("fade-in");
+            aboutbtnContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 1240){
+            musicContainer.classList.add("fade-in");
+            musicContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 1990){
+            gallery.classList.add("fade-in");
+            gallery.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 5750){
+            contactContainer.classList.add("fade-in");
+            contactContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 5825){
+            contactForm.classList.add("fade-in");
+            contactForm.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 6325){
+            pageFooter.classList.add("fade-in");
+            pageFooter.classList.remove("hidden");
+        }
+    }
+    if(document.documentElement.clientWidth < 800){
+        if(window.pageYOffset > 100){
+            aboutPicContainer.classList.add("fade-in");
+            aboutPicContainer.classList.remove("hidden");
+            aboutTextContainer.classList.add("fade-in");
+            aboutTextContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 760){
+            accordions.classList.add("fade-in");
+            accordions.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 945){
+            aboutbtnContainer.classList.add("fade-in");
+            aboutbtnContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 1070){
+            musicContainer.classList.add("fade-in");
+            musicContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 2110){
+            gallery.classList.add("fade-in");
+            gallery.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 3540){
+            contactContainer.classList.add("fade-in");
+            contactContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 3650){
+            contactForm.classList.add("fade-in");
+            contactForm.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 4100){
+            pageFooter.classList.add("fade-in");
+            pageFooter.classList.remove("hidden");
+        }
+    }
+    if(document.documentElement.clientWidth < 1000){
+        if(window.pageYOffset > 100){
+            aboutPicContainer.classList.add("fade-in");
+            aboutPicContainer.classList.remove("hidden");
+            aboutTextContainer.classList.add("fade-in");
+            aboutTextContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 760){
+            accordions.classList.add("fade-in");
+            accordions.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 945){
+            aboutbtnContainer.classList.add("fade-in");
+            aboutbtnContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 1070){
+            musicContainer.classList.add("fade-in");
+            musicContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 2110){
+            gallery.classList.add("fade-in");
+            gallery.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 4155){
+            contactContainer.classList.add("fade-in");
+            contactContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 4225){
+            contactForm.classList.add("fade-in");
+            contactForm.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 4730){
+            pageFooter.classList.add("fade-in");
+            pageFooter.classList.remove("hidden");
+        }
+    }
+    if(document.documentElement.clientWidth > 1000) {
+        if(window.pageYOffset > 100){
+            aboutPicContainer.classList.add("fade-in");
+            aboutPicContainer.classList.remove("hidden");
+            aboutTextContainer.classList.add("fade-in");
+            aboutTextContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 640){
+            accordions.classList.add("fade-in");
+            accordions.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 810){
+            aboutbtnContainer.classList.add("fade-in");
+            aboutbtnContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 940){
+            musicContainer.classList.add("fade-in");
+            musicContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 2000){
+            gallery.classList.add("fade-in");
+            gallery.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 2700){
+            contactContainer.classList.add("fade-in");
+            contactContainer.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 2770){
+            contactForm.classList.add("fade-in");
+            contactForm.classList.remove("hidden");
+        }
+        if(window.pageYOffset > 3310){
+            pageFooter.classList.add("fade-in");
+            pageFooter.classList.remove("hidden");
+        }        
+    }
+};
+      
+    </script>
+<script>
+  // INSTAGRAM GALLERY EVENT //
+
+var galleryFeed = new Instafeed({
+    get: "user",
+    userId: 3487386,
+    accessToken: "3487386.1677ed0.7181b7ccfbb347d883f17e23afda8d5a",
+    resolution: "standard_resolution",
+    useHttp: "true",
+    limit: 10,
+    template: "<a href='{{link}}'  target='_blank''><img src='{{image}}'></a>",
+});
+galleryFeed.run();
+</script>
+
+    </body>
+</html>
