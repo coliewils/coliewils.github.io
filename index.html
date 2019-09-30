@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Leospa - Clean & Minimal SCSS HTML5 Template</title>
+    <title>Inner G</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
 <style>
 
@@ -29,15 +29,43 @@
     color: indigo;
   }
   #hero-p-content {
-    color: #3af;
+    color: #30a0f0;
     width: inherit;
     font-size: 1.32em;
+    text-shadow: 1px 1px 1px rgba(0,135,255,0.16);
   }
 
+.disabled {
+  filter: drop-shadow(1px 2px 3px rgba(134,134,134,0.32));
+  padding: 5px 7px 5px 7px;
+  margin: auto;
+  color: #73d;
+  width: 67vw;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.owl-next span {
+  font-size: 4.5em;
+}
+.owl-prev span {
+  font-size: 4.5em;
+}
 
+p{
+    font-size: 1.25em;
+  }
+.btn:hover {
+  transform: scale(1.06);
+  transition: all 0.44s ease-in-out;
+}
 
-  
+.post {
+  min-height: 92vh;
+}
+
 </style>
   </head>
   <body class="home-two">
@@ -47,8 +75,8 @@
       <div class="container">
         <div class="row align-items-end">
           <div class="col-md-3">
-            <a href="index.html" class="logo">
-              <img src="images/logo.png" alt="">
+            <a href="index.html" class="logo" style="transform: translate(6px, 20px);">
+              <img style="transform: scale(1.32);" src="https://dl2.pushbulletusercontent.com/dHDRyZ9IKDDGelzEpCa9PIgASED0pndb/Inner%20G%20logo1v2.jpeg" alt="">
             </a>
           </div>
           <div class="col-md-9">
@@ -82,8 +110,8 @@
               <span style="padding: 3px 5px 3px 5px;">Inner G: Restorative & Holistic Care
 </span>
               <h2 id="hero-h2-content">Exceptional service that exceeds your expectations.</h2>
-              <p id="hero-p-content">Inner G: Restorative & Holistic Care is a supportive community dedicated to encourage personal development and enhance quality of life through comprehensive services that meets your physical, spiritual and emotional needs.</p>
-              <a href="#" class="btn" style="background-color: #4bf;">reserve now</a>
+              <p id="hero-p-content">Inner G : Restorative & Holistic Care is a supportive community dedicated to encourage personal development and enhance quality of life through comprehensive services that meets your physical, spiritual and emotional needs.</p>
+              <a href="#" class="btn" style="background-color: #4bf;">Schedule Now</a>
               <a class="video-btn" data-fancybox href="https://www.youtube.com/watch?v=QWUPm0ND7HY">
                 <i class="ti-control-play"></i>
                 Enter Our Mailing List
@@ -94,12 +122,17 @@
       </div>
     </section>
     <!-- Banner section end -->
+<script>
+ function dostuff () {
+    document.querySelector('.post').parentElement.style.minHeight =  '21vh';
+ }
 
+</script>
     <!-- Service section start -->
     <section class="service">
       <div class="service-caro owl-carousel">
         <div class="single-service">
-          <h5 style="text-align: center;"> <span style="color: indigo;font-weight: bold;">20%</span> Off Your First Treatment</h5>
+          <h5 style="text-align: center;"> <span style="color: indigo;font-weight: bold;">20%</span> off <span style="font-family: arial;">1</span>st Treatment</h5>
           <img src="images/service/1.jpg" alt="">
           <div class="service-hover">
             <img src="images/icons/1.png" alt="">
@@ -150,8 +183,8 @@
             <div class="sec-heading">
               <img src="https://dl3.pushbulletusercontent.com/iSw8dmgrfUiXuHeOllRboyxgZ47ID7JY/flowersection2G.png" alt="">
               <span class="tagline">About our spa center</span>
-              <h3 class="sec-title">Come and you will be Inspired!</h3>
-              <p>It’s the end of summer the sweltering heat makes human sweat in the night and makes the plants and trees wilt even in the moonlit nights. The eastern wind breeze brings an eerie feeling, that the monsoon clouds are soon coming, there is a strange silence in the ears, the sky gets darker and darker</p>
+              <h3 class="sec-title">It's Easy with Inner G!</h3>
+              <p>No need to decide between Swedish, Deep Tissue or Sports Massage. Each session is tailored to target troublesome areas, stretch and lengthen tight musculature and encourage relaxation.</p>
             </div>
             <a href="index.html" class="btn btn-round">Read more</a>
           </div>
@@ -167,8 +200,8 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 m-auto">
             <div class="sec-heading">
-              <h3 class="sec-title">Popular Procedures</h3>
-              <p>To doesn't his appear replenish together called he of mad place won't wherein blessed second every wherein were meat kind wherein and martcin</p>
+              <h3 class="sec-title">Inner G: Restorative & Holistic Care</h3>
+              <p>is a supportive community dedicated to encourage personal development and enhance quality of life through comprehensive services that meets your physical, spiritual and emotional needs</p>
             </div>
           </div>
         </div>
@@ -177,10 +210,8 @@
             <article class="post">
               <img src="images/post/3.jpg" alt="">
               <h4><a href="services.html">$20 Off Your First Treatment</a></h4>
-              <p>
-              Current 60 min rate: $75
-              <br>
-              Limited Time Offer
+              <p class="servP">
+             Massage treatment that's tailored and customized to your needs. Whether it is to unwind your mind, relax your muscles, alleviate soreness or manage chronic pain, we have the skill set to support your needs.
               </p>
               <a href="services.html" class="btn btn-round">read more</a>
             </article>
@@ -190,7 +221,7 @@
               <img src="images/post/1.jpg" alt="">
               <h4><a href="services.html">Yang Sheng Nourishing Life Membership
 </a></h4>
-              <p>Exclusive Discounts Available for Members &amp; more</p>
+              <p class="servP">Exclusive Discounts Available for Members &amp; more</p>
               <a href="services.html" class="btn btn-round">read more</a>
             </article>
           </div>
@@ -198,7 +229,7 @@
             <article class="post">
               <img src="images/post/2.jpg" alt="">
               <h4><a href="services.html">Therapist’s Treat</a></h4>
-              <p>Exchange Your Service For Ours</p>
+              <p class="servP">Exchange Your Service For Ours</p>
               <a href="services.html" class="btn btn-round">read more</a>
             </article>
           </div>
@@ -253,7 +284,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="single-memb">
-              <img src="images/team/1.jpg" alt="">
+              <img src="https://dl3.pushbulletusercontent.com/skBrihhS9RM9c3JSHnGxIDSudIBaT64r/innergFace2.jpg" alt="">
               <div class="memb-details">
                 <h6>Joseph Austin</h6>
                 <span>Thai Message</span>
@@ -344,8 +375,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <a href="index.html" class="logo foo-logo">
-              <img src="images/logo.png" alt="">
+            <a href="index.html" class="logo" style="margin: auto;">
+              <img style="transform: scale(1.32);border-radius: 50%;" src="https://dl2.pushbulletusercontent.com/dHDRyZ9IKDDGelzEpCa9PIgASED0pndb/Inner%20G%20logo1v2.jpeg" alt="">
             </a>
             <nav class="foo-nav">
               <ul> 
@@ -375,5 +406,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/scripts.js"></script>
+   
   </body>
 </html>
