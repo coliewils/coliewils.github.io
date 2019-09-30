@@ -146,6 +146,155 @@ google-container {
 
 
 
+
+
+
+#faq-links {padding: 0px 80px}
+
+#faq-links div {
+    color: #aeaeaf;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 18px 0
+}
+
+.faq-group {
+    padding: 0px 80px;
+    position: relative
+}
+
+.faq-group div {
+    font-weight: 700;
+    text-align: center;
+}
+
+.faq-group hr {
+        border: 0;
+    border-top: 1px solid #606060;
+    clear: both;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    height: 0;
+}
+
+.faq-group:after {
+    top: 33%;
+     left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: #393939;
+    border-width: 15px;
+  margin-left: -15px;
+  margin-top: 3.2vh;
+}
+
+.faq-accordion>li  {
+    border-top: 1px solid rgba(198, 198, 198, 0.4);
+    color: #666;
+    padding: 0.5em 0;
+    max-width: 67vw;
+}
+
+.faq-accordion li a {
+    color: #666;
+    padding: 0.5em;
+}
+
+.faq-accordion > li:last-child {
+    border-bottom: 1px solid rgba(198, 198, 198, 0.4);
+}
+
+.faq-accordion > li > a:before {
+    content: 'Q.';
+    padding-right: 0.313em
+}
+
+.faq-accordion > li > a:after {
+    color: #ff8300;
+    content: '+';
+    float: right;
+    font-weight:300;
+    margin-right: 0.5em;
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+            transform: scale(2);
+    overflow-y: hidden;
+}
+
+.faq-accordion > li > a.expanded:after {
+    color:  #ffa326;
+    content: '\2212';
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+            transform: scale(2);
+            max-width: 67vw;
+}
+
+.faq-accordion > li > a.expanded {font-weight: 700; opacity: 1 !important}
+
+.faq-content {
+    background-color: #ececec;
+    margin: 2px 0 -20px;
+}
+
+.faq-content p:before {
+    content: 'A.';
+    color: #ff8300;
+    float: left;
+    font-weight: 700;
+  margin-right: .5em
+}
+
+.faq-content p {
+    margin: 0 0.5em;
+    padding: 0.5em 0
+
+}
+
+.faq-hide {display: none}
+
+.faq-selected {
+    color: #49494b!important;
+ -webkit-transition: all 3s ease;
+         transition: all 3s ease;
+}
+
+ @media only screen and (min-width: 700px) and (min-width: 10000px) {
+
+                    .panels { display: none;}
+}
+
+
+
+
+
+
+
+
+
+.faq-accordion {
+    width: 68vw;
+
+}
+
+ .faq-accordion li a {
+        padding: 5px 7px 5px 7px;
+        color: #4c177d;
+        max-width: 67vw;
+    }
+
+
+}
+/*<!--/-->*/
+
+
+
 </style>
   </head>
   <body class="home-two">
@@ -496,13 +645,335 @@ google-container {
       </div>
     </section>
     <section>
-       <div class="col-md-12">
+      
+<h2 class="title-faq" style="text-align: center;">F.A.Q.</h2>
+<div class="container">
+<div id="faq-links">
+    <div id="service" class="faq-selected">Services</div>
+    <div id="installation">Important Questions</div>
+<!--     <div id="plan">Treatment Time</div>
+    <div id="features">Membership</div>
+    <div id="mobile">Scheduling</div> -->
+</div>
+
+
+
+<div id="faq-wrapper" class="about-service">
+
+<div class="faq-group">
+        <div class="slide-left">
+            <div>Services</div>
+        </div>
+
+
+    <hr>
+</div><!--faq-group-->
+<div class="slide-left">
+              <div  class="faq">
+                 <ul class="faq-accordion">
+
+                    <li>
+                        <a href="#">Is Massage Safe for Everyone?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Most massage techniques are safe for most people of all ages. With the right touch, massage is safe and a very beneficial health support. However, there are several contraindications that a massage would not be recommended. For example, contagious disease, fever, severe pain, or a history of thrombosis. Certain contraindications, such as recent injuries or deep vein thrombosis, will require the massage treatment to be modified. Please fill out the intake form to the best of your ability to inform your therapist of any modifications or concerns that will affect massage treatment.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">Can I benefit from a massage?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Absolutely! Massage Therapy can be effective for multiple health conditions and for overall health and wellness. Massage therapy is helpful to reduce stress and anxiety, blood pressure, chronic pain, headaches and much more!. Massage therapy is a great addition to preventative care. Click here to read more about massage therapy benefits!
+
+</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">I want a deep tissue massage. Why don’t you offer deep tissue?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Our therapeutic treatment is a perfect blend of deep tissue, sports, shiatsu and swedish massage. Our techniques and pressure are dependant on your bodies ability to soften and relax. The most benefit comes when your tissue layers allow for deeper pressure. Our belief is that with patience and the right touch, the body will benefit greatly than forceful deep pressure.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Carey ipsum-->
+                      <li>
+                        <a href="#">Is Cupping safe for everyone?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>There are some contraindications that cupping would not be recommended. Pregnant women, children, the elderly and people with certain health conditions would be denied cupping therapy. Health conditions that are not safe for cupping include cancer, organ failure, hemophilia, edema, blood disorders and certain heart disease. Certain medications are contraindicated such as blood-thinners. Click here to read more about cupping
+ 
+</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">What is Biodynamic Craniosacral Therapy?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Biodynamic Craniosacral Therapy (BCST) is a healing art that centers on balancing the energies of the body. Disease and disharmony is the product of imbalance. BCST supports the nervous system and the intelligence of your systems with gentle contact holds that promotes regulation and resetting of the nervous system.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">How will aromatherapy help me?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Essential oils have been used for over thousands of year to promote health and healing of physical, mental and/or emotional aspects of one’s self. Extensive studies have proven the benefits of essential oil usage for pain, dis-ease, anxiety, disorders and much more. Click here to read more about aromatherapy</p></div>
+                            </li>
+                        </ul>
+                    </li>
+<!--  -->
+
+  <li>
+                        <a href="#"> Can I add all add-ons to my service?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Yes, only if you are clear of any contraindications listed. Each add-on will add more time to your treatment. Please note that there is an additional price for each add-on. <span id="learnPricingFaq" style="width: auto;padding: 5px 7px 5px 7px;color: green;"><a href="https://square.site/book/BRX2ZVVP44KDN/inner-g-restorative-and-holistic-care-chicago-il" style="font-size:16px; ">See Add-on Options >></a></span></p></div>
+                            </li>
+                        </ul>
+                    </li>                   <!---->
+                    </ul>
+            </div>
+</div>
+</div>
+
+
+
+
+
+
+        <div class="about-installation faq-hide">
+
+<div class="faq-group">
+        <div class="slide-left">
+            <div>Important Questions</div>
+        </div>
+    <hr>
+</div>
+                 
+          <div class="slide-left">     
+                 <ul class="faq-accordion">
+
+                    <li>
+                        <a href="#">I hasve never received a massage before. What will my first appointment be like?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Before we can begin a massage, you will need to fill out an intake form. It is necessary to discuss any health or medical conditions that you are managing and any questions regarding the intake form or massage preferences. Your therapist will guide you on etiquette regarding where to place your clothing or communicating effectively during your treatment. Typically, most individuals are relaxing and quiet during their treatment, though, 
+</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">What Should I know before my appointment?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>coming soon</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">How Should I prepare for my appointment?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>coming soon</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Carey ipsum-->
+                          <li>
+                        <a href="#">What Should I Wear?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>coming soon</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">Is free parking available?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>yes</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">What If I need to cancel or reschedule my appointment?</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>coming soon</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Carey ipsum-->
+
+                    </ul>
+                    
+                </div><!--lide-left --> 
+        </div>
+
+
+        <div  class="about-plan faq-hide">
+
+<div class="faq-group">
+    <div class="slide-left">
+    <div>plan</div>
+    </div>
+    <hr>
+</div>
+            <div class="slide-left">
+                 <ul class="faq-accordion">
+
+                    <li>
+                        <a href="#">Duh ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">Buh Ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">Muh ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Carey ipsum-->
+                    </ul>
+                </div><!--slide-left-->
+        </div>
+
+        <div class="about-features faq-hide">
+
+<div class="faq-group">
+    <div class="slide-left">
+    <div>features</div>
+    </div>
+    <hr>
+</div>
+            <div class="slide-left">
+                 <ul class="faq-accordion">
+
+                    <li>
+                        <a href="#">Veggie ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">Wine Ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">Woody ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    </ul>
+                </div><!--slide-left-->
+        </div> <!--about-features faq-hide-->
+
+
+         <div  class="about-mobile faq-hide">
+
+<div class="faq-group">
+        <div class="slide-left">
+            <div>mobile</div>
+        </div>
+    <hr>
+</div>
+            <div class="slide-left">
+                 <ul class="faq-accordion">
+
+                    <li>
+                        <a href="#">Bacon ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Bacon ipsum dolor sit amet ham beef ribs pork, sirloin tail meatball filet mignon pancetta strip steak. T-bone swine turducken fatback beef ribs andouille meatball. Corned beef short ribs ribeye, hamburger brisket venison capicola boudin filet mignon drumstick shankle bacon beef. Shoulder shank filet mignon, kevin meatball beef ribs short loin shankle kielbasa jowl pancetta. Biltong shank tri-tip prosciutto sirloin pastrami. Turkey swine pork loin ground round pig chicken kielbasa sausage kevin ham hock.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Bacon ipsum-->
+
+                    <li>
+                        <a href="#">Beer Ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>ester saccharification mead lambic draft (draught), hand pump cask. brewing ale balthazar hops, " bitter becher craft beer keg alpha acid." crystal malt racking mouthfeel mash, barrel ale; malt! brewpub; biere de garde balthazar acid rest alcohol carbonation. wit beer krug brew mash hop back? shelf life, balthazar hand pump.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Beer ipsum-->
+
+                    <li>
+                        <a href="#">Carey ipsum</a>
+                        <ul class="faq-content">
+                            <li>
+                                <div><p>Alrighty then it's because i'm green isn't it! here she comes to wreck the day. alrighty then kinda hot in these rhinos. i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter. your entrance was good, his was better. we're going for a ride on the information super highway. we're going for a ride on the information super highway. look at that, it's exactly three seconds before i honk your nose and pull your underwear over your head. brain freeze. we got no food we got no money and our pets heads are falling off! haaaaaaarry.</p></div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--Carey ipsum-->
+                    </ul>
+                </div><!--slide-left-->
+        </div> <!--about-mobile faq-hide-->
+     </div><!--container-->
+<!--/ UI ADDED -->
+    </section>
+    <section>
+       <div class="col-md-12 m-auto">
             
 <section id="cd-google-map">
   <div id="google-container"></div>
   <div id="cd-zoom-in"></div>
   <div id="cd-zoom-out"></div>
-  <address>Inner G Holistic</address> 
+  <address><a href="">Inner G Holistic - Get Directions</a></address> 
 </section>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
@@ -825,8 +1296,81 @@ google-container {
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 });
 
-  
     </script>
-   
+<script>
+    var accordWithPage =  function() {
+  
+ var faqDiv = $('#faq-links div');
+  
+
+$(function () {
+  
+faqDiv.on("click", function() {
+    
+  var hideSec = 'faq-hide';  
+      var $this = $(this),
+      $id = $this.attr('id'),
+      $class = '.' + $('.about-' + $id).attr('class').replace(hideSec, '');
+
+  $('#faq-wrapper').addClass(hideSec);
+  $('.about-' + $id).removeClass(hideSec);
+  $('div[class*=about]').not($class).addClass(hideSec);
+     
+ });
+
+});
+
+$(function () {
+  
+        var select = 'faq-selected';      
+  
+        faqDiv.click(function () {
+
+        if ($(this).hasClass(select)) {
+            $(this).removeClass(select);
+        } else {
+            $('#faq-links .faq-selected').removeClass(select);
+            $(this).addClass(select);             
+        }
+    }); //faq link selected
+});
+
+  
+  
+//Accordion
+  
+$(function () {
+  
+  var expand = 'expanded';
+  var content = $('.faq-content');
+        //FAQ Accordion
+        $('.faq-accordion > li > a').click(function (e) {
+                e.preventDefault();
+        if ($(this).hasClass(expand)) {
+            $(this).removeClass(expand);
+//          $('.faq-accordion > li > a > div').not(this).css('opacity', '1');//returns li back to normal state
+            $(this).parent().children('ul').stop(true, true).slideUp();
+        } else {
+//            $('.faq-accordion > li > a > div').not(this).css('opacity', '0.5');//dims inactive li
+            $('.faq-accordion > li > a.expanded').removeClass(expand);
+            $(this).addClass(expand);
+            content.filter(":visible").slideUp();
+            $(this).parent().children('ul').stop(true, true).slideDown();
+        }
+    }); //accordion function
+
+    content.hide();
+
+}); 
+  
+}
+
+accordWithPage();
+
+
+
+
+
+</script>  
   </body>
 </html>
